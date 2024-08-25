@@ -7,7 +7,7 @@ Programme müssen in vielen Situationen selbst entscheiden, was sie weiter tun s
 
 So eine Verzweigung innerhalb eines Programms wird in Java mittels einer If-Anweisung gelöst:
 
-```
+```java
 public class GuessGame{
 	public static void main(String args[]){
 	    int numberToGuess, input;
@@ -15,7 +15,7 @@ public class GuessGame{
 	    numberToGuess = 6;
 	    System.out.print("Gib eine Zahl zwischen 1 und 10 ein: ");
 	    input = sc.nextInt();
-	    if (input = = numberToGuess) 
+	    if (input = numberToGuess) 
                 System.out.println("Richtig!");
 	    else 
                 System.out.println("Falsch geraten!");
