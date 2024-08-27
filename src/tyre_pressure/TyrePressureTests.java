@@ -10,7 +10,9 @@ public class TyrePressureTests {
     public void test_calc() {
         TyrePressureCalculator calculator=new TyrePressureCalculator();
         assertEquals(true, calculator.calc(34, 37, 46, 47));
+        // test are broken -> rear tyres above 45
         assertEquals(false, calculator.calc(38, 43, 45, 45));
+        // test are broken -> front tyres difference above 3
         assertEquals(false, calculator.calc(34, 37, 46, 42));
         assertEquals(true, calculator.calc(38, 41, 39, 39));
         assertEquals(true, calculator.calc(41, 42, 37, 35));
