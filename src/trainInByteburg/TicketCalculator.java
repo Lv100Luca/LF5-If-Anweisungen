@@ -72,14 +72,8 @@ public class TicketCalculator {
         var startLineNormalized = startLineNumber - 1;
         var exitLineNormalized = exitLineNumber - 1;
 
-        if (startLineNumber == 1 && exitLineNumber == availableLines.size()) {
-            System.out.println("special case for traveling from first line to the last line over station 3"); // todo fixme
-            return true;
-        }
-
-
-        return (startLineNormalized + 1) % availableLines.size() == exitLineNormalized ||
-                (startLineNormalized - 1) % availableLines.size() == exitLineNormalized;
+        return ((startLineNormalized + availableLines.size()) + 1) % availableLines.size() == exitLineNormalized ||
+                ((startLineNormalized + availableLines.size()) - 1) % availableLines.size() == exitLineNormalized;
     }
 
     private boolean isSameLine() {
